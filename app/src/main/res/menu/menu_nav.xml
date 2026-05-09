@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_carrito"
+            android:title="@string/carrito"
+            android:icon="@android:drawable/ic_menu_compass"/>
+
+    </group>
+
+    <item
+        android:id="@+id/nav_cerrar_sesion"
+        android:title="@string/cerrar_sesion"
+        android:icon="@android:drawable/ic_menu_compass"/>
+
+
+
+</menu>

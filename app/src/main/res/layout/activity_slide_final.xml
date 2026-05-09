@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/verde_claro"
+    tools:context=".ui.inicio.SlideFinalActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginTop="-90sp"
+        android:src="@drawable/slide_final" />
+
+    <TextView
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:src="@android:drawable/dialog_holo_dark_frame"
+        android:text="@string/text_slide_final"
+        android:textColor="@color/verde"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_slide_final2"
+        android:textSize="28sp"
+        android:layout_marginStart="55sp"
+        android:layout_marginEnd="55sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="3sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_slide_final3"
+        android:layout_marginStart="55sp"
+        android:layout_marginEnd="58sp"
+        android:layout_marginTop="15sp"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp">
+
+        <Button
+            android:id="@+id/btn_comenzar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="15sp"
+            android:backgroundTint="@color/verde"
+            android:text="@string/comenzar"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

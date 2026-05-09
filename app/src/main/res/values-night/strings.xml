@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Bienvenida">Bienvenidos</string>
+    <string name="tex_slaide_Inicial1">DESCUBRE EL MEJOR CATALOGO DE POSTRES</string>
+    <string name="tex_slaide_imicial2">Tortas, galletas, bebidas y más. Artesanales, frescos y listos para ti.</string>
+    <string name="button_omitir">Omitir</string>
+    <string name="button_siguiente"><![CDATA[Siguiente ->]]></string>
+    <string name="tex_slide2">FACIL Y RAPIDO</string>
+    <string name="tex_slide_secundario">PIDE EN SEGUNDOS, DESDE DONDE ESTES</string>
+    <string name="text_slide_secundario2">Agrega al carrito, elige tu dirección y paga de forma sgura con un solo toque</string>
+    <string name="text_slide_final">EN TIEMPO REAL</string>
+    <string name="text_slide_final2">SIGUE TU PEDIDO HASTA TU PUERTA</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="text_slide_final3">Recibe notificaciones en cada etapa: cuando preparan, cuando sale y cuando llega</string>
+    <string name="inicio_sesion">Inicio de sesíon</string>
+    <string name="correo">Correo Electrónico</string>
+    <string name="ejemplo_correo">oscar@ejemplo.com</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="password">***********</string>
+    <string name="requi_pass">La contraseña debe tener minimo 8 caracteres, numeros y caracteres especiales.</string>
+    <string name="olvidaste_contraseña">¿Olvidaste tu contraseña?</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="cuenta_google">Continuar con google</string>
+    <string name="iniciar_con_google">Iniciar sesión con google</string>
+    <string name="ingresar_huella">Ingresar con huella</string>
+    <string name="titulo_registro">REGISTRO DE USUARIO</string>
+    <string name="nombre_apellidos">Nombre y apellidos</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="pass">Contraseña</string>
+    <string name="conf_contraseña">Confirmar contraseña</string>
+    <string name="nueva_cuenta">Crear cuenta</string>
+    <string name="nombre_tienda">MYO Delicious</string>
+    <string name="inicio">Inicio</string>
+    <string name="catalogo">Catalogo</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="perfil">Perfil</string>
+    <string name="navigation_drawer_open">Menu abierto</string>
+    <string name="navigation_drawer_close">Menu cerrado</string>
+    <string name="cerrar_sesion">Cerrar sesion</string>
+    <string name="carrito">Carrito</string>
+</resources>

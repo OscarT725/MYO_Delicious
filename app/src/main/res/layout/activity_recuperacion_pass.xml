@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/gris_claro"
+    tools:context=".ui.auth.RecuperacionPassActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_regre1"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:paddingLeft="5dp"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="38dp"
+            app:srcCompat="@drawable/logo2" />
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="326dp"
+        android:layout_height="398dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Recuperacion de contraseña"
+            android:textColor="@color/blue"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/correo"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/text_recup_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="25dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/style_edit_text"
+            android:ems="10"
+            android:hint="@string/ejemplo_correo"
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/gris" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:text="Enviar enlace de recuperacion"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="230dp"
+            android:backgroundTint="@color/azul_claro"/>
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

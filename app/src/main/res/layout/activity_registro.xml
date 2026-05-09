@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".ui.auth.RegistroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/img_regre"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:paddingLeft="5dp"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/titulo_registro"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/logo2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:background="@color/gris_claro">
+
+            <EditText
+                android:id="@+id/re_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:hint="@string/nombre_apellidos"
+                android:textColorHint="@color/gris"
+                android:inputType="textEmailAddress"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/gris"
+                android:textSize="15sp"
+                />
+
+            <EditText
+                android:id="@+id/re_correo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:hint="@string/correo_electronico"
+                android:textColorHint="@color/gris"
+                android:inputType="textEmailAddress"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/gris"
+                android:textSize="15sp"
+                />
+
+            <EditText
+                android:id="@+id/re_pass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:hint="@string/pass"
+                android:textColorHint="@color/gris"
+                android:inputType="textEmailAddress"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/gris"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/obs_pas"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:id="@+id/re_conf_pass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:hint="@string/conf_contraseña"
+                android:textColorHint="@color/gris"
+                android:inputType="textEmailAddress"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/gris"
+                android:textSize="15sp"
+                />
+
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terminos_condiciones"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                />
+
+            <Button
+                android:id="@+id/btn_crear_cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:text="@string/nueva_cuenta"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
