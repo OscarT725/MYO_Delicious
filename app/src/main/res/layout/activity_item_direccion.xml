@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    tools:context=".ui.main.usuario.ItemDireccionActivity"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <TextView
+                android:id="@+id/tv_nombre_direc"
+                android:layout_width="311dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_direccion"
+                android:layout_width="311dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_barrio"
+                android:layout_width="311dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/sw_dir_prin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Principal"
+                android:layout_gravity="right"/>
+
+            <Button
+                android:id="@+id/btn_editar_direc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="60dp"
+                android:text="@string/editar"
+                android:textSize="14dp"
+                android:backgroundTint="@color/cafe"
+                android:textStyle="bold"/>
+
+
+            <Button
+                android:id="@+id/btn_elimin_direc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="200dp"
+                android:text="@string/eliminar"
+                android:textSize="14dp"
+                android:backgroundTint="@color/rojo"
+                android:textStyle="bold"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

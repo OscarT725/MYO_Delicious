@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Si la dirección de correo electrónico esta registrada, recibirás un enlace paraa reestablecer tu contraseña en breve. Revisa tu bandeja de entrada o la carpeta de Spam."
+            android:text="@string/correo_enviado"
             android:layout_marginTop="130dp"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="35dp"
@@ -42,6 +42,7 @@
             android:textColor="@color/black" />
 
         <Button
+            android:id="@+id/btn_volv_inicio"
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:layout_marginStart="40dp"
@@ -52,9 +53,6 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
-
-
-
 
     </FrameLayout>
 

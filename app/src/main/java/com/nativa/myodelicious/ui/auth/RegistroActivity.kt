@@ -3,6 +3,7 @@ package com.nativa.myodelicious.ui.auth
 import android.content.Intent
 import android.os.Bundle
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,8 @@ import com.nativa.myodelicious.R
 class RegistroActivity : AppCompatActivity() {
 
     private lateinit var img_Regresar: ImageView
+
+    private lateinit var btnCrearCuenta: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +39,15 @@ class RegistroActivity : AppCompatActivity() {
             insets
         }
 
-
-
         img_Regresar = findViewById(R.id.img_regre)
         img_Regresar.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+
+        btnCrearCuenta = findViewById(R.id.btn_crear_cuenta)
+        btnCrearCuenta.setOnClickListener {
+            startActivity(Intent(this, CuentaCreadaActivity::class.java))
             finish()
         }
 

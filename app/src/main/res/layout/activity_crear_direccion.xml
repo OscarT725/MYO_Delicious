@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gris_claro"
+    tools:context=".ui.main.usuario.CrearDireccionActivity">
+
+    <ImageView
+        android:id="@+id/img_out_crea_dir"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_regresar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar_editardirecci_n"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <FrameLayout
+        android:layout_width="360dp"
+        android:layout_height="526dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/nombre_de_la_direcci_n"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/tv_nombre_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/style_edit_text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/direcc"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/tv_direc"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/style_edit_text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="205dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/barrio_ciudad"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/tv_barrio_ciu"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/style_edit_text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="305dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/indicaciones_rep"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/tv_notas_rep"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="355dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/style_edit_text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <Button
+            android:id="@+id/btn_guardar_cambios"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginEnd="70dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/guardar"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

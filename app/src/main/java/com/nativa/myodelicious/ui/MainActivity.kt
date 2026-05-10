@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home -> cargarFragment(fragment = HomeFragment())
                 R.id.nav_catalogo -> cargarFragment(fragment = CatalogoFragment())
                 R.id.nav_favoritos -> cargarFragment(fragment = FavoritosFragment())
-                R.id.nav_perfil -> cargarFragment(fragment = PerfilFragment())
+
 
             }
             true
@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { item ->
             when (item.itemId){
                 R.id.nav_carrito -> cargarFragment(fragment = CarritoFragment())
+                R.id.nav_perfil -> cargarFragment(fragment = PerfilFragment())
                 R.id.nav_cerrar_sesion -> finish()
             }
             drawerLayout.closeDrawers()

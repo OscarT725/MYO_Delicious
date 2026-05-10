@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MYODelicious">
         <activity
+            android:name=".ui.main.productos.DetalleProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.usuario.ConfiguracionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.usuario.CrearDireccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.usuario.ItemDireccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.usuario.DireccionesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.usuario.EditarPerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.productos.ItemProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.CuentaCreadaActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.auth.RecupPassOkActivity"
             android:exported="false" />
         <activity

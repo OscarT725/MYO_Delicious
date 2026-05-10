@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/img_producto"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/imagen_del_producto"/>
+
+            <ImageButton
+                android:id="@+id/btn_favorito"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:background="@drawable/circulo_blanco_favoritos"
+                android:src="@drawable/ic_corazon_rojo"
+                android:padding="2dp"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:ignore="TouchTargetSizeCheck"
+                android:contentDescription="Agregar a favoritos"/>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_nombre_pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_precio_pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"/>
+
+        <Button
+            android:id="@+id/btn_agregar_carrito"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/agregar_al_carrito"
+            android:textSize="12sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/white"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            android:backgroundTint="@color/blue"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

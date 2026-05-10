@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gris_claro"
+    tools:context=".ui.main.usuario.EditarPerfilActivity">
+
+    <ImageView
+        android:id="@+id/img_out_edit_per"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_regresar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/editar_perfil_actualizado"
+        android:textColor="@color/blue"
+        android:textSize="30sp"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <FrameLayout
+        android:layout_width="360dp"
+        android:layout_height="526dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_usuario"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="140dp"
+            android:src="@drawable/ic_usuario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/toque_para_cambiar"
+            android:textSize="11sp"
+            android:textStyle="italic"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/nombre_completo"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/tv_nombre_actualizado"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/style_edit_text"
+            android:hint="@string/nombre_y_apellido"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/gris" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/tel_fono"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/tv_num_cel"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/style_edit_text"
+            android:hint="@string/num_cel"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/gris"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/correo_solo_lectura"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/tv_correo_lectura"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="375dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/style_edit_text"
+            android:backgroundTint="@color/azul_claro"
+            android:hint="@string/mail_ejemplo_com"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/gris" />
+
+        <Button
+            android:id="@+id/btn_guardar_cambios"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginEnd="70dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/guardar_cambios"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

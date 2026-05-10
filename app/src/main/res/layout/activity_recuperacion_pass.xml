@@ -75,6 +75,7 @@
             android:textColor="@color/gris" />
 
         <Button
+            android:id="@+id/btn_solicita_co"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:layout_marginStart="40dp"
