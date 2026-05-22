@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +14,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MYODelicious">
         <activity
+            android:name=".ui.main.usuario.AyudaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.usuario.HistorialPedidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.admin.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.admin.g_productos.GestionProductosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.admin.g_productos.NuevoProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.admin.ItemAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.carrito.PagoExitosoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.carrito.PasarelaPagoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.carrito.PasarePagosActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.productos.DetalleProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.usuario.CuponDescuentoActivity"
             android:exported="false" />
         <activity
             android:name=".ui.main.usuario.ConfiguracionActivity"

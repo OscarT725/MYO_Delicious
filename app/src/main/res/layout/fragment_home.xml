@@ -32,6 +32,7 @@
             >
 
             <ImageView
+                android:id="@+id/imn_torta_choc"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -112,13 +113,24 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/productos_destacados"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_productos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:clipToPadding="false"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_productos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:clipToPadding="false"
+            android:padding="10dp" />
     </LinearLayout>
 
 </LinearLayout>

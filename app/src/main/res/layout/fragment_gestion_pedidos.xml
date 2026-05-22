@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/naranja_claro"
+    tools:context=".ui.main.admin.g_pedidos.GestionPedidosFragment">
+
+    <ImageView
+        android:id="@+id/img_out_g_pedidos"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_regresar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gestion_de_pedidos"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_todos_p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/todos"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded,SmallSp" />
+
+        <Button
+            android:id="@+id/btn_p_activos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activos"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:backgroundTint="@color/gris_claro"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            tools:ignore="RtlHardcoded,SmallSp" />
+
+        <Button
+            android:id="@+id/btn_p_entreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entregados"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:backgroundTint="@color/gris_claro"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            tools:ignore="RtlHardcoded,SmallSp" />
+
+        <Button
+            android:id="@+id/btn_p_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelados"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:backgroundTint="@color/gris_claro"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            tools:ignore="RtlHardcoded,SmallSp,SpUsage" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orden_myo"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/estatus"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/verde"
+                    android:layout_marginLeft="170dp"
+                    tools:ignore="RtlHardcoded" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fecha"
+                    android:textColor="@color/gris"
+                    android:textSize="14sp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dd_mm_aaaa"
+                    android:textColor="@color/gris"
+                    android:textSize="14dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/items"
+                    android:textColor="@color/gris"
+                    android:textSize="14dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_items"
+                    android:textColor="@color/gris"
+                    android:textSize="14dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="17dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    android:textColor="@color/gris"
+                    android:textSize="14dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_total"
+                    android:textColor="@color/gris"
+                    android:textSize="14dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+
+
+
+
+    </ScrollView>
+
+</LinearLayout>

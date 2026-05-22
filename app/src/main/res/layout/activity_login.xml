@@ -43,7 +43,7 @@
             />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/et_mail_login"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="50dp"
@@ -127,7 +127,7 @@
             />
 
         <LinearLayout
-            android:id="@+id/btn_google"
+            android:id="@+id/ly_google"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginStart="35dp"

@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.nativa.myodelicious.R
 import com.nativa.myodelicious.R.id.btn_comenzar
+import com.nativa.myodelicious.ui.MainActivity
 import com.nativa.myodelicious.ui.auth.LoginActivity
 
 class SlideFinalActivity : AppCompatActivity() {

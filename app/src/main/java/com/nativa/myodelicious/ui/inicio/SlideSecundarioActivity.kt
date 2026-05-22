@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.nativa.myodelicious.R
 import com.nativa.myodelicious.R.id
 import com.nativa.myodelicious.R.id.btn_siguiente2
+import com.nativa.myodelicious.ui.MainActivity
 import com.nativa.myodelicious.ui.auth.LoginActivity
 
 class SlideSecundarioActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class SlideSecundarioActivity : AppCompatActivity() {
 
     btnOmitir1 = findViewById(id.btn_omitir1)
         btnOmitir1.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
     btnSiguiente2 = findViewById(btn_siguiente2)

@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.nativa.myodelicious.R
+import com.nativa.myodelicious.ui.main.admin.AdminFragment
 import com.nativa.myodelicious.ui.main.productos.HomeFragment
 
 class PerfilFragment : Fragment() {
@@ -22,21 +23,36 @@ class PerfilFragment : Fragment() {
     private lateinit var lyConfiguracion: LinearLayout
     private lateinit var tvAyuda: TextView
 
+
+    companion object {
+        fun newInstance(esAdmin: Boolean): PerfilFragment {
+            val fragment = PerfilFragment()
+            val args = Bundle()
+            args.putBoolean("esAdmin", esAdmin)
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_perfil, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val esAdmin = arguments?.getBoolean("esAdmin") ?: false
+
         img_Salir_Perfil = view.findViewById(R.id.img_out_per)
         img_Salir_Perfil.setOnClickListener {
+
+            val fragmentDestino = if (esAdmin) AdminFragment() else HomeFragment()
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, HomeFragment())
+                .replace(R.id.fragment_container, fragmentDestino)
                 .commit()
         }
 
@@ -46,23 +62,33 @@ class PerfilFragment : Fragment() {
         }
 
         lyOrdenes = view.findViewById(R.id.ly_ordenes)
-        lyOrdenes.setOnClickListener {
-            // startActivity(Intent(requireContext(), OrdenesActivity::class.java)) //pendiente
-        }
-
         lyMis_Direcciones = view.findViewById(R.id.ly_direcciones)
-        lyMis_Direcciones.setOnClickListener {
-            startActivity(Intent(requireContext(), DireccionesActivity::class.java))
-        }
-
         lyConfiguracion = view.findViewById(R.id.ly_config)
-        lyConfiguracion.setOnClickListener {
-            startActivity(Intent(requireContext(), ConfiguracionActivity::class.java))
+        tvAyuda = view.findViewById(R.id.tv_ayuda)
+
+
+        if (esAdmin) {
+            lyOrdenes.visibility = View.GONE
+            lyMis_Direcciones.visibility = View.GONE
+        } else {
+            lyOrdenes.visibility = View.VISIBLE
+            lyMis_Direcciones.visibility = View.VISIBLE
+
+            lyOrdenes.setOnClickListener {
+                startActivity(Intent(requireContext(), HistorialPedidosActivity::class.java))
+            }
+            lyMis_Direcciones.setOnClickListener {
+                startActivity(Intent(requireContext(), DireccionesActivity::class.java))
+            }
         }
 
-        tvAyuda = view.findViewById(R.id.tv_ayuda)
+        lyConfiguracion.setOnClickListener {
+            val intent = Intent(requireContext(), ConfiguracionActivity::class.java)
+            intent.putExtra("esAdmin", esAdmin)
+            startActivity(intent)
+        }
         tvAyuda.setOnClickListener {
-            // startActivity(Intent(requireContext(), AyudaActivity::class.java)) //pendiente
+            startActivity(Intent(requireContext(), AyudaActivity::class.java))
         }
     }
 }

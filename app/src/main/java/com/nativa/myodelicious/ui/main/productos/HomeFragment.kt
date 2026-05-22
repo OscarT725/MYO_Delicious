@@ -13,6 +13,7 @@ import com.nativa.myodelicious.R
 class HomeFragment : Fragment() {
 
 
+
     private val ListaProductos = listOf(
         Productos("Torta de chocolate", precio = 45.000, imagenRes = R.drawable.torta_de_chocolate,esFavorito = true,categoria = "Tortas"),
         Productos("Postre de maracuya", precio = 15.000, imagenRes = R.drawable.postre_maracuya,esFavorito = false,categoria = "Postres"),
@@ -31,6 +32,8 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = ProductAdapter(ListaProductos)
         return view
         }
+
+
 
 
     }

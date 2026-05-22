@@ -67,7 +67,23 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/style_edit_text"
                 android:ems="10"
-                android:hint="@string/nombre_apellidos"
+                android:hint="@string/nombres"
+                android:textColorHint="@color/gris"
+                android:inputType="textEmailAddress"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/gris"
+                android:textSize="15sp"
+                />
+
+            <EditText
+                android:id="@+id/re_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/style_edit_text"
+                android:ems="10"
+                android:hint="@string/apellidos"
                 android:textColorHint="@color/gris"
                 android:inputType="textEmailAddress"
                 android:paddingStart="15dp"
@@ -101,7 +117,7 @@
                 android:ems="10"
                 android:hint="@string/pass"
                 android:textColorHint="@color/gris"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:textColor="@color/gris"
@@ -127,7 +143,7 @@
                 android:ems="10"
                 android:hint="@string/conf_contraseña"
                 android:textColorHint="@color/gris"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:textColor="@color/gris"
@@ -136,7 +152,7 @@
 
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/ch_termin_cond"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/terminos_condiciones"
@@ -156,6 +172,18 @@
                 android:text="@string/nueva_cuenta"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ini_sesi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ya_tiene_cuenta_iniciar_sesi_n"
+                android:textColor="@color/blue"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                tools:ignore="SpUsage" />
 
 
 

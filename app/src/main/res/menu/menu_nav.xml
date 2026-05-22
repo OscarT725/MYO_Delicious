@@ -10,20 +10,22 @@
             android:title="@string/carrito"
             android:icon="@android:drawable/ic_menu_compass"/>
 
+        <item
+            android:id="@+id/nav_perfil"
+            android:title="@string/perfil"
+            android:icon="@android:drawable/ic_menu_myplaces"/>
+
+        <item
+            android:id="@+id/nav_cupon_descuento"
+            android:title="Cupones de descuento"
+            android:icon="@drawable/ic_cupon"/>
+
+        <item
+            android:id="@+id/nav_cerrar_sesion"
+            android:title="@string/cerrar_sesion"
+            android:icon="@android:drawable/ic_menu_compass"/>
+
     </group>
-
-
-
-    <item
-        android:id="@+id/nav_perfil"
-        android:title="@string/perfil"
-        android:icon="@android:drawable/ic_menu_myplaces"/>
-
-    <item
-        android:id="@+id/nav_cerrar_sesion"
-        android:title="@string/cerrar_sesion"
-        android:icon="@android:drawable/ic_menu_compass"/>
-
 
 
 </menu>
