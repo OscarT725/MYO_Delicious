@@ -162,9 +162,10 @@
 
                 <Switch
                     android:id="@+id/sw_estatus"
-                    android:layout_width="40dp"
+                    android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="15dp" />
+                    android:layout_marginLeft="15dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
                 <TextView
@@ -174,7 +175,8 @@
                     android:text="@string/ingredientes"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
+
 
                 <EditText
                     android:id="@+id/et_ingre_prod"

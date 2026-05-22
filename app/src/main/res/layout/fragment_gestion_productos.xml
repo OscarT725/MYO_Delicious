@@ -28,7 +28,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="180sp">
+        android:layout_height="180dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -154,16 +154,20 @@
 
         <ImageView
             android:layout_width="25dp"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:src="@drawable/ic_buscar"/>
 
-        <TextView
+        <EditText
+            android:id="@+id/et_buscar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:text="@string/barra_de_busqueda"
-            android:textColor="@color/gris"/>
+            android:layout_height="48dp"
+            android:hint="@string/barra_de_busqueda"
+            android:background="@android:color/transparent"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"/>
 
     </LinearLayout>
 
@@ -289,7 +293,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_productos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:padding="10dp"
         android:layout_marginTop="15dp"
         android:clipToPadding="false"/>

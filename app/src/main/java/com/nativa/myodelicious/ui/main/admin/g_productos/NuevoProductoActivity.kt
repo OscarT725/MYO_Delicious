@@ -10,21 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.nativa.myodelicious.R
 import com.nativa.myodelicious.SupabaseClient
+import com.nativa.myodelicious.ui.main.productos.Producto
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
-import kotlinx.serialization.Serializable
 
-@Serializable
-data class Producto(
-    val nombre: String,
-    val precio: Double,
-    val imagen_url: String?,
-    val categoria: String,
-    val estatus: Boolean,
-    val descripcion: String?,
-    val ingredientes: String?,
-    val tiempo_preparacion: String?
-)
 class NuevoProductoActivity : AppCompatActivity() {
 
     private lateinit var etNombre: EditText
@@ -39,6 +28,8 @@ class NuevoProductoActivity : AppCompatActivity() {
     private lateinit var imgRegresar: ImageView
 
     private var productoId: String? = null
+    private var esFavoritoOriginal: Boolean = false
+    private var createdAtOriginal: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,21 +75,24 @@ class NuevoProductoActivity : AppCompatActivity() {
         }
 
         val precio = precioStr.toDoubleOrNull() ?: 0.0
-        val urlImg = etUrlImg.text.toString().trim().ifEmpty { null }
-        val descripcion = etDescripcion.text.toString().trim().ifEmpty { null }
-        val ingredientes = etIngredientes.text.toString().trim().ifEmpty { null }
-        val tiempoPrep = etTiempoPreparacion.text.toString().trim().ifEmpty { null }
+        val urlImg = etUrlImg.text.toString().trim()
+        val descripcion = etDescripcion.text.toString().trim()
+        val ingredientes = etIngredientes.text.toString().trim()
+        val tiempoPrep = etTiempoPreparacion.text.toString().trim()
         val estatus = swEstatus.isChecked
 
         val producto = Producto(
+            id = productoId ?: "",
             nombre = nombre,
             precio = precio,
-            imagen_url = urlImg,
+            imagenUrl = urlImg,
             categoria = categoria,
             estatus = estatus,
             descripcion = descripcion,
             ingredientes = ingredientes,
-            tiempo_preparacion = tiempoPrep
+            tiempoPreparacion = tiempoPrep,
+            favorito = esFavoritoOriginal, // Mantenemos el estado de favorito
+            createdAt = createdAtOriginal  // Mantenemos la fecha de creación si existe
         )
 
         lifecycleScope.launch {
@@ -132,15 +126,19 @@ class NuevoProductoActivity : AppCompatActivity() {
                         }.decodeSingleOrNull<Producto>()
 
                     if (producto != null) {
+                        productoId = producto.id
+                        esFavoritoOriginal = producto.favorito
+                        createdAtOriginal = producto.createdAt
+
                         runOnUiThread {
                             etNombre.setText(producto.nombre)
                             etPrecio.setText(producto.precio.toString())
-                            etUrlImg.setText(producto.imagen_url ?: "")
+                            etUrlImg.setText(producto.imagenUrl)
                             etCategoria.setText(producto.categoria)
                             swEstatus.isChecked = producto.estatus
-                            etDescripcion.setText(producto.descripcion ?: "")
-                            etIngredientes.setText(producto.ingredientes ?: "")
-                            etTiempoPreparacion.setText(producto.tiempo_preparacion ?: "")
+                            etDescripcion.setText(producto.descripcion)
+                            etIngredientes.setText(producto.ingredientes)
+                            etTiempoPreparacion.setText(producto.tiempoPreparacion)
                         }
                     } else {
                         runOnUiThread {

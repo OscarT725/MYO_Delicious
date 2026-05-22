@@ -18,6 +18,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 
+@OptIn(kotlinx.serialization.InternalSerializationApi::class)
 class AdminFragment : Fragment(R.layout.fragment_admin) {
 
     private lateinit var tvValorVentas: TextView

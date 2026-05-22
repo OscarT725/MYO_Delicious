@@ -37,6 +37,7 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var btnRegistro: Button
     private lateinit var tv_Inicio_sesion: TextView
 
+    @OptIn(kotlinx.serialization.InternalSerializationApi::class)
     @Serializable
     data class UsuarioData(
         val id: String,

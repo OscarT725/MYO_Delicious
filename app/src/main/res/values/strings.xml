@@ -174,4 +174,5 @@
     <string name="total_venta">$0</string>
     <string name="estatus_1">Estatus</string>
     <string name="url_imagen">Url imagen</string>
+    <string name="formato_precio">$%1$,.0f</string>
 </resources>
