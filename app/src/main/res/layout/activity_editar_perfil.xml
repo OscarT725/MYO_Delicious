@@ -43,6 +43,7 @@
             android:src="@drawable/ic_usuario" />
 
         <TextView
+            android:id="@+id/tv_subir_foto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="130dp"

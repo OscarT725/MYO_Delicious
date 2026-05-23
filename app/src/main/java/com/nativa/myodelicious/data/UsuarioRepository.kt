@@ -1,8 +1,10 @@
 package com.nativa.myodelicious.data
 
+import android.content.Context
 import com.nativa.myodelicious.SupabaseClient
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.postgrest.postgrest
+import io.github.jan.supabase.storage.storage
 import kotlinx.serialization.Serializable
 
 @OptIn(kotlinx.serialization.InternalSerializationApi::class)
@@ -94,7 +96,13 @@ object UsuarioRepository {
             "cliente"
         }
     }
-    suspend fun actualizarPerfil(id: String, nombres: String, apellidos: String, telefono: String) {
+    suspend fun actualizarPerfil(
+        id: String,
+        nombres: String,
+        apellidos: String,
+        telefono: String,
+        foto_url: String? = null
+    ) {
         try {
             SupabaseClient.client
                 .postgrest["usuarios"]
@@ -102,11 +110,37 @@ object UsuarioRepository {
                     set("nombres", nombres)
                     set("apellidos", apellidos)
                     set("telefono", telefono)
+                    set("foto_url", foto_url)
                 }) {
                     filter { eq("id", id) }
                 }
         } catch (e: Exception) {
             android.util.Log.e("UsuarioRepository", "Error al actualizar perfil: ${e.message}", e)
         }
+    }
+
+    suspend fun subirFotoPerfil(
+        context: android.content.Context,
+        uri: android.net.Uri
+    ): String {
+        val id = SupabaseClient.client.auth
+            .currentUserOrNull()?.id ?: return ""
+
+        val bytes = if (uri.scheme == "content") {
+            context.contentResolver.openInputStream(uri)?.readBytes()
+        } else {
+            java.io.File(uri.path!!).readBytes()
+        } ?: return ""
+
+        val rutaArchivo =  "perfil_$id.jpg"
+
+        SupabaseClient.client.storage["avatars"]
+            .upload(
+                path = rutaArchivo,
+                data = bytes,
+                options = {upsert = true}
+            )
+        return SupabaseClient.client.storage["avatars"]
+            .publicUrl(rutaArchivo)
     }
 }

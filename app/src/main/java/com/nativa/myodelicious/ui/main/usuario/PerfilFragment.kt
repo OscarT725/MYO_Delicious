@@ -9,12 +9,23 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
+import coil.load
+import coil.request.CachePolicy
+import coil.transform.CircleCropTransformation
+import androidx.lifecycle.lifecycleScope
 import com.nativa.myodelicious.R
+import com.nativa.myodelicious.data.UsuarioRepository
 import com.nativa.myodelicious.ui.main.admin.AdminFragment
 import com.nativa.myodelicious.ui.main.productos.HomeFragment
+import kotlinx.coroutines.launch
 
 class PerfilFragment : Fragment() {
 
+    private lateinit var ivFoto: ImageView
+
+    private lateinit var tvNombreUsuario: TextView
+    private var currentFotoUrl: String? = null
     private lateinit var img_Salir_Perfil: ImageView
     private lateinit var tvEditar_Perfil: TextView
     private lateinit var lyOrdenes: LinearLayout
@@ -55,7 +66,30 @@ class PerfilFragment : Fragment() {
                 .replace(R.id.fragment_container, fragmentDestino)
                 .commit()
         }
+        tvNombreUsuario = view.findViewById(R.id.tv_nombre_usuario)
+        ivFoto = view.findViewById(R.id.img_usuario)
 
+        viewLifecycleOwner.lifecycleScope.launch {
+            val usuario = UsuarioRepository.obtenerUsuarioActual()
+
+            if (usuario != null) {
+                tvNombreUsuario.text = "${usuario.nombres} ${usuario.apellidos}"
+                if (!usuario.foto_url.isNullOrEmpty()) {
+                    currentFotoUrl = usuario.foto_url
+                    val urlConTimestamp =
+                        "${usuario.foto_url}?timestamp=${System.currentTimeMillis()}"
+                    ivFoto.load(urlConTimestamp) {
+                        transformations(CircleCropTransformation())
+                        placeholder(R.drawable.logo2)
+                        error(R.drawable.logo2)
+                        memoryCachePolicy(CachePolicy.DISABLED)
+                        diskCachePolicy(CachePolicy.DISABLED)
+                    }
+                } else {
+                    Toast.makeText(requireContext(), "No hay foto", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
         tvEditar_Perfil = view.findViewById(R.id.tv_edit_per)
         tvEditar_Perfil.setOnClickListener {
             startActivity(Intent(requireContext(), EditarPerfilActivity::class.java))
