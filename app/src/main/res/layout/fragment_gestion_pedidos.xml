@@ -8,7 +8,7 @@
     tools:context=".ui.main.admin.g_pedidos.GestionPedidosFragment">
 
     <ImageView
-        android:id="@+id/img_out_g_pedidos"
+        android:id="@+id/img_out_g_pedido"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginTop="30dp"
@@ -38,9 +38,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/gris_claro"
             android:text="@string/todos"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="10sp"
             android:textStyle="bold"
             tools:ignore="RtlHardcoded,SmallSp" />
@@ -87,133 +87,13 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pedidos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:background="@color/white"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/orden_myo"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="8dp"
-                    tools:ignore="RtlHardcoded" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/estatus"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:layout_marginTop="12dp"
-                    android:background="@color/verde"
-                    android:layout_marginLeft="170dp"
-                    tools:ignore="RtlHardcoded" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fecha"
-                    android:textColor="@color/gris"
-                    android:textSize="14sp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="15dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/dd_mm_aaaa"
-                    android:textColor="@color/gris"
-                    android:textSize="14dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="15dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/items"
-                    android:textColor="@color/gris"
-                    android:textSize="14dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginLeft="15dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/n_items"
-                    android:textColor="@color/gris"
-                    android:textSize="14dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginLeft="17dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/total"
-                    android:textColor="@color/gris"
-                    android:textSize="14dp"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginLeft="15dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/val_total"
-                    android:textColor="@color/gris"
-                    android:textSize="14dp"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginLeft="20dp"/>
-
-            </LinearLayout>
-
-
-
-        </FrameLayout>
-
-
-
-
-
-    </ScrollView>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:clipToPadding="false"/>
 
 </LinearLayout>

@@ -154,4 +154,7 @@
     <string name="total_venta">$0</string>
     <string name="estatus_1">Estatus</string>
     <string name="url_imagen">Url imagen</string>
+    <string name="valor_total_pedido">$</string>
+    <string name="orden">Orden: MYO#</string>
+    <string name="estatus_pedi" />
 </resources>
