@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MYODelicious">
+
         <activity
             android:name=".ui.main.admin.g_pedidos.ItemPedidosActivity"
             android:exported="false" />

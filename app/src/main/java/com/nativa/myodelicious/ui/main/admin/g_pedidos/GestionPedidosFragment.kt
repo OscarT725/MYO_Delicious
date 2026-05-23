@@ -31,7 +31,7 @@ class GestionPedidosFragment : Fragment(R.layout.fragment_gestion_pedidos) {
         btnActivos    = view.findViewById(R.id.btn_p_activos)
         btnEntregados = view.findViewById(R.id.btn_p_entreg)
         btnCancelados = view.findViewById(R.id.btn_p_cancel)
-        rvPedidos     = view.findViewById(R.id.rv_pedidos)
+        rvPedidos     = view.findViewById(R.id.rv_pedidos) //Pendiente creacion
 
         adapter = PedidosAdapter(emptyList())
         rvPedidos.layoutManager = LinearLayoutManager(requireContext())

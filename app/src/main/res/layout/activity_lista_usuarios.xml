@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/naranja_claro"
+    tools:context=".ui.main.admin.ListaUsuariosFragment">
+
+    <ImageView
+        android:id="@+id/img_out_list_usuario"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_regresar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/listado_de_usuarios"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TableLayout
+            android:id="@+id/table_usuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1,2"
+            android:shrinkColumns="1,2"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+
+
+</LinearLayout>

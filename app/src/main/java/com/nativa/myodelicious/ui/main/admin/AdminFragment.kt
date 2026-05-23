@@ -52,6 +52,13 @@ class AdminFragment : Fragment(R.layout.fragment_admin) {
                 .commit()
         }
 
+        view.findViewById<View>(R.id.ly_usuarios).setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ListaUsuariosFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
         resaltarBoton(btnHoy)
         cargarEstadisticas("hoy")
 

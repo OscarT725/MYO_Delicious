@@ -34,10 +34,10 @@ class PedidosAdapter(
         holder.tvNumPedido.text = idCorto
         holder.tvEstatus.text = pedido.estatus
         val colorFondo = when (pedido.estatus.lowercase()) {
-            "activo"    -> Color.parseColor("#2196F3") // azul
-            "entregado" -> Color.parseColor("#4CAF50") // verde
-            "cancelado" -> Color.parseColor("#F44336") // rojo
-            else        -> Color.parseColor("#9E9E9E") // gris
+            "activo"    -> Color.parseColor("blue")
+            "entregado" -> Color.parseColor("verde")
+            "cancelado" -> Color.parseColor("rojo")
+            else        -> Color.parseColor("gris")
         }
         holder.tvEstatus.setBackgroundColor(colorFondo)
         holder.tvFecha.text = pedido.createdAt?.let { raw ->

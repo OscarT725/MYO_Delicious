@@ -157,4 +157,5 @@
     <string name="valor_total_pedido">$</string>
     <string name="orden">Orden: MYO#</string>
     <string name="estatus_pedi" />
+    <string name="listado_de_usuarios">Listado de Usuarios</string>
 </resources>
