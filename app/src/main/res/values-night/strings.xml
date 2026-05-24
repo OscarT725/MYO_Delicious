@@ -158,4 +158,7 @@
     <string name="orden">Orden: MYO#</string>
     <string name="estatus_pedi" />
     <string name="listado_de_usuarios">Listado de Usuarios</string>
+    <string name="galletas">Galletas</string>
+    <string name="postres">Postres</string>
+    <string name="tortas">Tortas</string>
 </resources>

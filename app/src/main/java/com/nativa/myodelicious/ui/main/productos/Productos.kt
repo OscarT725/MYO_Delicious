@@ -18,9 +18,11 @@ data class Producto(
     @SerialName("imagen_url")
     val imagenUrl: String = "",
 
+    val imagenRes: Int? = null,
+
     val categoria: String = "",
 
-    val favorito: Boolean = false,
+    var favorito: Boolean = false,
 
     val estatus: Boolean = true,
 
@@ -30,12 +32,4 @@ data class Producto(
 
     @SerialName("tiempo_preparacion")
     val tiempoPreparacion: String = ""
-)
-
-data class Productos(
-    val nombre: String,
-    val precio: Double,
-    val imagenRes: Int,
-    var esFavorito: Boolean,
-    val categoria: String
 )

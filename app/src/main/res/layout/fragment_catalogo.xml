@@ -21,6 +21,101 @@
         android:gravity="center"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="left"
+        >
+
+        <ImageView
+            android:id="@+id/imn_torta_choc"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/torta_chocolate"/>
+
+        <ImageView
+            android:id="@+id/img_postre"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/postre_fresa"/>
+
+        <ImageView
+            android:id="@+id/img_galleta"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/galletas"/>
+
+        <ImageView
+            android:id="@+id/img_all_prod"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/todos"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="left"
+        >
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tortas"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="43dp"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/postres"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="27dp"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/galletas"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="27dp"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/todos_los_productos"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="29dp"/>
+
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_productos"
         android:layout_width="match_parent"

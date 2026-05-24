@@ -226,7 +226,7 @@
         <TextView
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="Tortas"
+            android:text="@string/tortas"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -236,7 +236,7 @@
         <TextView
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="Postres"
+            android:text="@string/postres"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -246,7 +246,7 @@
         <TextView
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="Galletas"
+            android:text="@string/galletas"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -256,7 +256,7 @@
         <TextView
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="Todos los productos"
+            android:text="@string/todos_los_productos"
             android:textColor="@color/black"
             android:textSize="12sp"
             android:textStyle="bold"

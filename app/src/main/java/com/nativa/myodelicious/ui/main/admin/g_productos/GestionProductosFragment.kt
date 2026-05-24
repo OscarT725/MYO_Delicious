@@ -34,11 +34,11 @@ class GestionProductosFragment : Fragment(R.layout.fragment_gestion_productos) {
     private lateinit var etBuscar: EditText
 
     companion object {
-        private const val CATEGORIA_TODOS   = "TODOS"
-        private const val CATEGORIA_TORTA   = "Tortas"
-        private const val CATEGORIA_POSTRE  = "Postres"
-        private const val CATEGORIA_GALLETA = "Galletas"
-        private const val TABLA_PRODUCTOS   = "productos"
+        const val CATEGORIA_TODOS   = "TODOS"
+        const val CATEGORIA_TORTA   = "Tortas"
+        const val CATEGORIA_POSTRE  = "Postres"
+        const val CATEGORIA_GALLETA = "Galletas"
+        const val TABLA_PRODUCTOS   = "productos"
     }
 
 

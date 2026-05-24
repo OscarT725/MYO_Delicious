@@ -22,97 +22,6 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/fron_productos1" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="left"
-            >
-
-            <ImageView
-                android:id="@+id/imn_torta_choc"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:src="@drawable/torta_chocolate"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:src="@drawable/postre_fresa"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:src="@drawable/galletas"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="40dp"
-                android:src="@drawable/todos"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="left"
-            >
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:text="Tortas"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="40dp"
-                android:layout_marginStart="43dp"/>
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:text="Postres"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="40dp"
-                android:layout_marginStart="27dp"/>
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:text="Galletas"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="40dp"
-                android:layout_marginStart="27dp"/>
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:text="Todos los productos"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="40dp"
-                android:layout_marginStart="29dp"/>
-
-
-        </LinearLayout>
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,6 +31,13 @@
             android:textSize="20dp"
             android:textAlignment="center"
             android:layout_marginTop="15dp"/>
+
+        <ProgressBar
+            android:id="@+id/pb_cargando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
 
 
         <androidx.recyclerview.widget.RecyclerView
