@@ -15,16 +15,17 @@ import com.nativa.myodelicious.R
 class ProductAdapter(
     initialProductos: List<Producto> = listOf(),
     private val onItemClick: ((Producto) -> Unit)? = null,
-    private val onFavoriteClick: ((Producto) -> Unit)? = null
+    private val onFavoriteClick: ((Producto) -> Unit)? = null,
+    private val onAddToCartClick: ((Producto) -> Unit)? = null // Nuevo lambda para el carrito
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     private val productos: MutableList<Producto> = initialProductos.toMutableList()
 
     class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imagen: ImageView = itemView.findViewById(R.id.img_producto)
-        val nombre: TextView = itemView.findViewById(R.id.tv_nombre_pro)
-        val precio: TextView = itemView.findViewById(R.id.tv_precio_pro)
-        val btnAgregar: Button = itemView.findViewById(R.id.btn_agregar_carrito)
+        val imagen: ImageView      = itemView.findViewById(R.id.img_producto)
+        val nombre: TextView       = itemView.findViewById(R.id.tv_nombre_pro)
+        val precio: TextView       = itemView.findViewById(R.id.tv_precio_pro)
+        val btnAgregar: Button     = itemView.findViewById(R.id.btn_agregar_carrito)
         val btnFavorito: ImageButton = itemView.findViewById(R.id.btn_favorito)
     }
 
@@ -52,24 +53,26 @@ class ProductAdapter(
             .into(holder.imagen)
 
         actualizarIconoCorazon(holder.btnFavorito, producto.favorito)
-
         holder.btnFavorito.setOnClickListener {
-            producto.favorito = !producto.favorito
-            actualizarIconoCorazon(holder.btnFavorito, producto.favorito)
             onFavoriteClick?.invoke(producto)
         }
-
         holder.imagen.setOnClickListener {
             onItemClick?.invoke(producto)
         }
-
         holder.btnAgregar.setOnClickListener {
+            onAddToCartClick?.invoke(producto)
         }
     }
 
     fun actualizarLista(nuevosProductos: List<Producto>) {
         productos.clear()
         productos.addAll(nuevosProductos)
+        notifyDataSetChanged()
+    }
+
+    // Método expuesto para que el fragmento cambie la UI si el usuario sí está logueado
+    fun toggleFavoritoUI(producto: Producto) {
+        producto.favorito = !producto.favorito
         notifyDataSetChanged()
     }
 

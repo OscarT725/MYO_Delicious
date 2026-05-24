@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.nativa.myodelicious.R
 import com.nativa.myodelicious.SupabaseClient
+import com.nativa.myodelicious.ui.MainActivity
+import com.nativa.myodelicious.ui.auth.LoginActivity
 import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -51,7 +53,22 @@ class HomeFragment : Fragment() {
                 startActivity(intent)
             },
             onFavoriteClick = { producto ->
-                actualizarFavoritoEnSupabase(producto)
+                val mainActivity = activity as? MainActivity
+                if (mainActivity?.esInvitado == true) {
+                    startActivity(Intent(requireContext(), LoginActivity::class.java))
+                } else {
+                    adapter.toggleFavoritoUI(producto)
+                    actualizarFavoritoEnSupabase(producto)
+                }
+            },
+            onAddToCartClick = { producto ->
+                val mainActivity = activity as? MainActivity
+                if (mainActivity?.esInvitado == true) {
+                    // Si es invitado, lo llevamos a Iniciar Sesión
+                    startActivity(Intent(requireContext(), LoginActivity::class.java))
+                } else {
+                    Toast.makeText(requireContext(), "Agregado al carrito", Toast.LENGTH_SHORT).show()
+                }
             }
         )
 
@@ -109,6 +126,8 @@ class HomeFragment : Fragment() {
                     "Error al actualizar favorito: ${e.message}",
                     Toast.LENGTH_SHORT
                 ).show()
+                // Opcional: Revertir el cambio visual si falla la base de datos
+                // adapter.toggleFavoritoUI(producto)
             }
         }
     }

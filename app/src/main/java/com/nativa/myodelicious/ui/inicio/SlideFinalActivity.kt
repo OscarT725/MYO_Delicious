@@ -5,12 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.nativa.myodelicious.R
-import com.nativa.myodelicious.R.id.btn_comenzar
 import com.nativa.myodelicious.ui.MainActivity
-import com.nativa.myodelicious.ui.auth.LoginActivity
 
 class SlideFinalActivity : AppCompatActivity() {
 
@@ -21,10 +17,14 @@ class SlideFinalActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_slide_final)
 
-    btnComenzar = findViewById(btn_comenzar)
+        btnComenzar = findViewById(R.id.btn_comenzar)
         btnComenzar.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            // Se lanza MainActivity pasando el flag de invitado
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("ES_INVITADO", true)
+            }
+            startActivity(intent)
+            finish() // Opcional: cierra el slide para que no pueda volver atrás con el botón de retroceso
         }
-
     }
 }

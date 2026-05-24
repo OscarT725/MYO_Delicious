@@ -23,16 +23,19 @@ class SlideSecundarioActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_slide_secundario)
 
-    btnOmitir1 = findViewById(id.btn_omitir1)
+        btnOmitir1 = findViewById(id.btn_omitir1)
         btnOmitir1.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("ES_INVITADO", true)
+            }
+            startActivity(intent)
+            finish()
         }
 
-    btnSiguiente2 = findViewById(btn_siguiente2)
+        btnSiguiente2 = findViewById(btn_siguiente2)
         btnSiguiente2.setOnClickListener {
             startActivity(Intent(this, SlideFinalActivity::class.java))
         }
-
 
     }
 }

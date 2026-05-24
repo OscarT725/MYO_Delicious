@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
     <group android:checkableBehavior="single">
-
         <item
             android:id="@+id/nav_carrito"
             android:title="@string/carrito"
             android:icon="@android:drawable/ic_menu_compass"/>
-
         <item
             android:id="@+id/nav_perfil"
             android:title="@string/perfil"
             android:icon="@android:drawable/ic_menu_myplaces"/>
-
         <item
             android:id="@+id/nav_cupon_descuento"
-            android:title="Cupones de descuento"
+            android:title="@string/cupon_de_descuento"
             android:icon="@drawable/ic_cupon"/>
-
         <item
             android:id="@+id/nav_cerrar_sesion"
             android:title="@string/cerrar_sesion"
             android:icon="@android:drawable/ic_menu_compass"/>
 
+        <item
+            android:id="@+id/nav_iniciar_sesion"
+            android:title="@string/iniciar_sesi_n"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:visible="false"/>
     </group>
-
-
 </menu>

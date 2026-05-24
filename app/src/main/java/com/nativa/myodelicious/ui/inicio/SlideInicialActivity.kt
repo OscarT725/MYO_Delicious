@@ -13,7 +13,6 @@ import com.nativa.myodelicious.R.id.btn_omitir
 import com.nativa.myodelicious.ui.MainActivity
 import com.nativa.myodelicious.ui.auth.LoginActivity
 
-
 class SlideInicialActivity : AppCompatActivity() {
 
     private lateinit var btnOmitir: Button
@@ -25,12 +24,16 @@ class SlideInicialActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_slide_inicial)
 
-    btnOmitir = findViewById(btn_omitir)
+        btnOmitir = findViewById(btn_omitir)
         btnOmitir.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("ES_INVITADO", true)
+            }
+            startActivity(intent)
+            finish()
         }
 
-    btnSiguiente1 = findViewById(R.id.btn_siguiente1)
+        btnSiguiente1 = findViewById(R.id.btn_siguiente1)
         btnSiguiente1.setOnClickListener {
             startActivity(Intent(this, SlideSecundarioActivity::class.java))
         }
