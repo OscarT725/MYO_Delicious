@@ -20,13 +20,11 @@ class PasarelaPagoActivity : AppCompatActivity() {
 
         img_OutPas = findViewById(R.id.img_out_pasa)
         img_OutPas.setOnClickListener {
-            // Cerramos esta actividad para volver al fragmento anterior (CarritoFragment) en la MainActivity
             finish()
         }
 
         btn_ContPagr = findViewById(R.id.btn_cont_pag)
         btn_ContPagr.setOnClickListener {
-            // Ir a la pantalla de pago exitoso
             startActivity(Intent(this, PagoExitosoActivity::class.java))
             finish()
         }

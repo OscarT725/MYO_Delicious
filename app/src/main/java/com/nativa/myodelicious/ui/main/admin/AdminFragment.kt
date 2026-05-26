@@ -128,16 +128,16 @@ class AdminFragment : Fragment(R.layout.fragment_admin) {
                 val totalUsuarios = contarRegistros(resUsuarios)
 
                 requireActivity().runOnUiThread {
-                    tvValorVentas.text   = "$${"%,.0f".format(totalVentas)}"
-                    tvValorPedidos.text  = "$totalPedidos"
+                    tvValorVentas.text = "$${"%,.0f".format(totalVentas)}"
+                    tvValorPedidos.text = "$totalPedidos"
                     tvValorUsuarios.text = "$totalUsuarios"
                 }
 
             } catch (e: Exception) {
                 android.util.Log.e("AdminFragment", "Error: ${e.message}", e)
                 requireActivity().runOnUiThread {
-                    tvValorVentas.text   = "–"
-                    tvValorPedidos.text  = "–"
+                    tvValorVentas.text = "–"
+                    tvValorPedidos.text = "–"
                     tvValorUsuarios.text = "–"
                 }
             }

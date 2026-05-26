@@ -35,15 +35,15 @@ class ConfiguracionActivity : AppCompatActivity() {
 
         prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
 
-        imgOutConfig      = findViewById(R.id.img_out_conf)
-        swNotiPed         = findViewById(R.id.sw_noti_ped)
-        swNotiProm        = findViewById(R.id.sw_noti_prom)
-        swNotiSop         = findViewById(R.id.sw_noti_sop)
-        lyNotiPedidos     = findViewById(R.id.ly_noti_pedidos)
+        imgOutConfig = findViewById(R.id.img_out_conf)
+        swNotiPed = findViewById(R.id.sw_noti_ped)
+        swNotiProm = findViewById(R.id.sw_noti_prom)
+        swNotiSop = findViewById(R.id.sw_noti_sop)
+        lyNotiPedidos = findViewById(R.id.ly_noti_pedidos)
         lyNotiPromociones = findViewById(R.id.ly_noti_promociones)
-        imgTemaClaro      = findViewById(R.id.Img_tem_claro)
-        imgTemaOscuro     = findViewById(R.id.Img_tem_oscu)
-        imgTemaSistema    = findViewById(R.id.Img_tem_siste)
+        imgTemaClaro = findViewById(R.id.Img_tem_claro)
+        imgTemaOscuro = findViewById(R.id.Img_tem_oscu)
+        imgTemaSistema = findViewById(R.id.Img_tem_siste)
 
         val esAdmin = intent.getBooleanExtra("esAdmin", false)
 

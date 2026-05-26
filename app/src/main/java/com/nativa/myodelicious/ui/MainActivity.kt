@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     var esAdmin = false
-    var esInvitado = false // Agregamos la variable pública para que los fragments la lean
+    var esInvitado = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,23 +50,17 @@ class MainActivity : AppCompatActivity() {
 
         val target = intent.getStringExtra("TARGET_FRAGMENT")
         esAdmin = target == "ADMIN"
-
-        // Verificamos si entró como invitado
         esInvitado = intent.getBooleanExtra("ES_INVITADO", false)
 
         bottomNav.visibility = if (esAdmin) View.GONE else View.VISIBLE
-
-        // Configuración del Menú Lateral (Drawer)
         navView.menu.apply {
             if (esInvitado) {
-                // Modo Invitado: Solo Iniciar sesión
                 findItem(R.id.nav_carrito)?.isVisible = false
                 findItem(R.id.nav_perfil)?.isVisible = false
                 findItem(R.id.nav_cupon_descuento)?.isVisible = false
                 findItem(R.id.nav_cerrar_sesion)?.isVisible = false
                 findItem(R.id.nav_iniciar_sesion)?.isVisible = true
             } else {
-                // Modo Usuario/Admin normal
                 findItem(R.id.nav_carrito)?.isVisible = !esAdmin
                 findItem(R.id.nav_cupon_descuento)?.isVisible = !esAdmin
                 findItem(R.id.nav_iniciar_sesion)?.isVisible = false
@@ -88,7 +82,6 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
         navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_carrito -> cargarFragment(CarritoFragment())

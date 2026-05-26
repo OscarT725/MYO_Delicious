@@ -23,14 +23,12 @@ import kotlinx.coroutines.launch
 class PerfilFragment : Fragment() {
 
     private lateinit var ivFoto: ImageView
-
     private lateinit var tvNombreUsuario: TextView
     private var currentFotoUrl: String? = null
     private lateinit var img_Salir_Perfil: ImageView
     private lateinit var tvEditar_Perfil: TextView
     private lateinit var lyOrdenes: LinearLayout
     private lateinit var lyMis_Direcciones: LinearLayout
-
     private lateinit var lyConfiguracion: LinearLayout
     private lateinit var tvAyuda: TextView
 

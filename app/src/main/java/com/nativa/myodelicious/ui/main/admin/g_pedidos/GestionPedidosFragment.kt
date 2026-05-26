@@ -31,7 +31,7 @@ class GestionPedidosFragment : Fragment(R.layout.fragment_gestion_pedidos) {
         btnActivos    = view.findViewById(R.id.btn_p_activos)
         btnEntregados = view.findViewById(R.id.btn_p_entreg)
         btnCancelados = view.findViewById(R.id.btn_p_cancel)
-        rvPedidos     = view.findViewById(R.id.rv_pedidos) //Pendiente creacion
+        rvPedidos     = view.findViewById(R.id.rv_pedidos)
 
         adapter = PedidosAdapter(emptyList())
         rvPedidos.layoutManager = LinearLayoutManager(requireContext())
@@ -59,13 +59,11 @@ class GestionPedidosFragment : Fragment(R.layout.fragment_gestion_pedidos) {
         lifecycleScope.launch {
             try {
                 val json = if (estatus == null) {
-                    // Todos los pedidos — bloque vacío igual que AdminFragment
                     SupabaseClient.client
                         .postgrest["pedidos"]
                         .select { }
                         .data
                 } else {
-                    // Filtrado por el campo "estatus" de la tabla
                     SupabaseClient.client
                         .postgrest["pedidos"]
                         .select {
@@ -106,13 +104,13 @@ class GestionPedidosFragment : Fragment(R.layout.fragment_gestion_pedidos) {
                 val obj = array.getJSONObject(i)
                 lista.add(
                     Pedido(
-                        id            = obj.optString("id", ""),
-                        createdAt     = obj.optString("created_at", null),
-                        item          = obj.optString("item", ""),
-                        valor         = obj.optDouble("valor", 0.0),
-                        cliente       = obj.optString("cliente", ""),
-                        direccion     = obj.optString("direccion", ""),
-                        estatus       = obj.optString("estatus", ""),
+                        id = obj.optString("id", ""),
+                        createdAt = obj.optString("created_at", null),
+                        item = obj.optString("item", ""),
+                        valor = obj.optDouble("valor", 0.0),
+                        cliente = obj.optString("cliente", ""),
+                        direccion = obj.optString("direccion", ""),
+                        estatus = obj.optString("estatus", ""),
                         cantidadItems = obj.optInt("cantidad_items", 0)
                     )
                 )

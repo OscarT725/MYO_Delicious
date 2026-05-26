@@ -50,7 +50,6 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.activity_registro)
-        //Manejo del scroll adaptable por teclado
 
         val rootView = findViewById<ViewGroup>(R.id.main)
         ViewCompat.setOnApplyWindowInsetsListener(rootView) { v, insets ->
@@ -81,8 +80,6 @@ class RegistroActivity : AppCompatActivity() {
             finish()
         }
 
-        //Listener de boton de registro
-
         btnRegistro.setOnClickListener {
             val nombres = etNombre.text.toString().trim()
             val apellidos = etApellido.text.toString().trim()
@@ -91,7 +88,6 @@ class RegistroActivity : AppCompatActivity() {
             val reContrasena = etReContrasena.text.toString().trim()
             val regex = Regex("^(?=.*[A-Z])(?=.*[!@#\$%^&*(),.?\":{}|<>]).{8,}$")
 
-            // validaciones locales de los campos
             if (nombres.isEmpty() || apellidos.isEmpty() || correo.isEmpty() || contrasena.isEmpty() || reContrasena.isEmpty()){
                 Toast.makeText(this, "Por favor complete todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -109,15 +105,12 @@ class RegistroActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            //Registro de usuario en supabase
             lifecycleScope.launch {
                 try {
-                    //1. Registro de correo y contraseña en supabase Auth
                     val userInfo = SupabaseClient.client.auth.signUpWith(Email){
                         email = correo
                         password = contrasena
                     }
-                    //2. Obtener el UUID generado y guardar los datos adicionales
                     val userId = SupabaseClient.client.auth.currentUserOrNull()?.id?: ""
 
                     SupabaseClient.client.postgrest["usuarios"].insert(
@@ -129,7 +122,6 @@ class RegistroActivity : AppCompatActivity() {
                         }
                     )
 
-                    //3. Redirigir el usuario a login
                     runOnUiThread {
                         Toast.makeText(this@RegistroActivity, "Registro exitoso", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this@RegistroActivity, LoginActivity::class.java))
@@ -143,7 +135,6 @@ class RegistroActivity : AppCompatActivity() {
             }
         }
 
-        //Listener del texto ya tiene cuenta --> Login
         tv_Inicio_sesion.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()

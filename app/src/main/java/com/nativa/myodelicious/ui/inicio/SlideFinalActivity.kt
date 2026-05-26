@@ -19,12 +19,11 @@ class SlideFinalActivity : AppCompatActivity() {
 
         btnComenzar = findViewById(R.id.btn_comenzar)
         btnComenzar.setOnClickListener {
-            // Se lanza MainActivity pasando el flag de invitado
             val intent = Intent(this, MainActivity::class.java).apply {
                 putExtra("ES_INVITADO", true)
             }
             startActivity(intent)
-            finish() // Opcional: cierra el slide para que no pueda volver atrás con el botón de retroceso
+            finish()
         }
     }
 }

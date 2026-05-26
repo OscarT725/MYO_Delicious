@@ -42,7 +42,6 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        //Referenciar las vistas del XML
         etCorreo = findViewById(R.id.et_mail_login)
         etContrasena = findViewById(R.id.et_password)
         btnIniciarSesion = findViewById(R.id.btn_iniciar)
@@ -58,17 +57,14 @@ class LoginActivity : AppCompatActivity() {
 
         tvRecuperarContrasena.setOnClickListener {
             startActivity(Intent(this, RecuperacionPassActivity::class.java))
-            finishAffinity() // No puede regresar posterior al Logearce
+            finishAffinity()
         }
-
         btnIniciarSesion.setOnClickListener {
             iniciarSesion()
         }
-
         LayoutGoogle.setOnClickListener{
             iniciarSesionConGoogle()
         }
-
         tvIngresarHuella.setOnClickListener {
             mostrarDialogoHuella()
         }
@@ -102,7 +98,6 @@ class LoginActivity : AppCompatActivity() {
                         }
                     } else {
                         Toast.makeText(this@LoginActivity, "Primero debe iniciar sesión con usuario y contraseña para habilitar la huella", Toast.LENGTH_SHORT).show()
-                        //configurar la huella visible
                     }
                 }
 
@@ -150,7 +145,6 @@ class LoginActivity : AppCompatActivity() {
                     email = correo
                     password = contrasena
                 }
-                //Guardar las credenciasles localmente para habilitar la huella
                 CredencialesManager.guardarCredenciales(this@LoginActivity, correo, contrasena)
                 irAPantallaPrincipal()
             }catch (e: Exception){
@@ -183,7 +177,6 @@ class LoginActivity : AppCompatActivity() {
                 val result = credentialManager.getCredential(this@LoginActivity, request)
 
                 val googleIdTokenCredential = GoogleIdTokenCredential.createFrom(result.credential.data)
-                // Enviar token de Google a Supabase
 
                 SupabaseClient.client.auth.signInWith(IDToken){
                     idToken = googleIdTokenCredential.idToken

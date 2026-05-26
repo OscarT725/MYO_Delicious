@@ -13,11 +13,11 @@ class PedidosAdapter(
 ) : RecyclerView.Adapter<PedidosAdapter.PedidoViewHolder>() {
 
     class PedidoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvNumPedido:   TextView = itemView.findViewById(R.id.tv_num_pedido)
-        val tvEstatus:     TextView = itemView.findViewById(R.id.tv_estatus)
-        val tvFecha:       TextView = itemView.findViewById(R.id.tv_fecha_pedido)
-        val tvItems:       TextView = itemView.findViewById(R.id.tv_items_pedido)
-        val tvTotal:       TextView = itemView.findViewById(R.id.tv_total_pedido)
+        val tvNumPedido: TextView = itemView.findViewById(R.id.tv_num_pedido)
+        val tvEstatus: TextView = itemView.findViewById(R.id.tv_estatus)
+        val tvFecha: TextView = itemView.findViewById(R.id.tv_fecha_pedido)
+        val tvItems: TextView = itemView.findViewById(R.id.tv_items_pedido)
+        val tvTotal: TextView = itemView.findViewById(R.id.tv_total_pedido)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PedidoViewHolder {
@@ -34,10 +34,10 @@ class PedidosAdapter(
         holder.tvNumPedido.text = idCorto
         holder.tvEstatus.text = pedido.estatus
         val colorFondo = when (pedido.estatus.lowercase()) {
-            "activo"    -> Color.parseColor("blue")
+            "activo" -> Color.parseColor("blue")
             "entregado" -> Color.parseColor("verde")
             "cancelado" -> Color.parseColor("rojo")
-            else        -> Color.parseColor("gris")
+            else -> Color.parseColor("gris")
         }
         holder.tvEstatus.setBackgroundColor(colorFondo)
         holder.tvFecha.text = pedido.createdAt?.let { raw ->

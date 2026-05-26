@@ -69,8 +69,6 @@ class ProductAdapter(
         productos.addAll(nuevosProductos)
         notifyDataSetChanged()
     }
-
-    // Método expuesto para que el fragmento cambie la UI si el usuario sí está logueado
     fun toggleFavoritoUI(producto: Producto) {
         producto.favorito = !producto.favorito
         notifyDataSetChanged()

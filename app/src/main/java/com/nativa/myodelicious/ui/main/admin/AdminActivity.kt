@@ -13,7 +13,6 @@ class AdminActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        // Usamos el mismo layout que tenía el fragmento, pero ahora como actividad
         setContentView(R.layout.fragment_admin)
     }
 

@@ -64,9 +64,9 @@ class ListaUsuariosFragment : Fragment(R.layout.activity_lista_usuarios) {
         if (!isAdded) return
         val context         = requireContext()
         val colorEncabezado = ContextCompat.getColor(context, R.color.blue)
-        val colorFilaImpar  = ContextCompat.getColor(context, R.color.white)
-        val colorFilaPar    = ContextCompat.getColor(context, R.color.azul_claro)
-        val colorTexto      = ContextCompat.getColor(context, R.color.black)
+        val colorFilaImpar = ContextCompat.getColor(context, R.color.white)
+        val colorFilaPar = ContextCompat.getColor(context, R.color.azul_claro)
+        val colorTexto = ContextCompat.getColor(context, R.color.black)
         val colorTextoHeader= ContextCompat.getColor(context, R.color.white)
 
         tableLayout.removeAllViews()
@@ -108,7 +108,6 @@ class ListaUsuariosFragment : Fragment(R.layout.activity_lista_usuarios) {
             for (i in 0 until array.length()) {
                 val obj = array.getJSONObject(i)
 
-                // Imprimir claves del primer objeto para diagnóstico
                 if (i == 0) {
                     val claves = obj.keys().asSequence().toList()
                     android.util.Log.d("ListaUsuarios", "Columnas disponibles: $claves")
